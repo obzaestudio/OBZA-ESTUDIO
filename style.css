@@ -1,0 +1,154 @@
+/* Reseteo básico y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-principal: #111;
+    --color-secundario: #fff;
+    --color-acento: #888;
+}
+
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Sección Productos */
+.productos {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.productos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.producto img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.producto:hover img {
+    transform: scale(1.02);
+}
+
+.producto h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.producto p {
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
